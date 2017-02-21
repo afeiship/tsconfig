@@ -13,6 +13,11 @@ var Store = nx.declare('nx.Store', {
         var value = global[Store.engine].getItem(inKey);
         return nx.parse(value);
     },
+    sets:function(inObject){
+        nx.each(inObject,function(key,value){
+            Store.set(key,value);
+        });
+    },
     clear: function (inKey) {
         global[Store.engine].removeItem(inKey);
     },
