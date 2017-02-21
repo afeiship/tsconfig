@@ -4,7 +4,7 @@
   } else if (typeof exports === 'object') {
     module.exports = factory();
   } else {
-    root.Index = factory();
+    root.Next-store = factory();
   }
 }(this, function() {
 nx.declare('nx.Store', {
@@ -33,5 +33,5 @@ nx.declare('nx.Store', {
     }
   }
 })
-return Index;
+return Next-store;
 }));

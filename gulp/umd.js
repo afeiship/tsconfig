@@ -10,7 +10,7 @@
   });
 
     gulp.task('umd', function() {
-    return gulp.src('src/index.js')
+    return gulp.src('src/next-store.js')
         .pipe($.umd())
         .pipe(gulp.dest('dist'));
     });
