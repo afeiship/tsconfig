@@ -1,4 +1,4 @@
-var nx = require('next-js-core2')
+var nx = require('next-js-core2');
 var global = nx.GLOBAL;
 var Store = nx.declare('nx.Store', {
   statics: {
