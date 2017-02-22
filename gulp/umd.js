@@ -13,7 +13,7 @@
   return gulp.src('src/next-store.js')
       .pipe($.umd({
         exports:function(){
-          return 'nx.Store';
+          return 'Store';
         },
         namespace: function(file) {
           return 'nx.Store';
@@ -22,8 +22,8 @@
           return [
             {
               name: 'nx',
-              amd: 'nx',
-              cjs: 'nx',
+              amd: '',
+              cjs: 'next-js-core2',
               global: 'nx'
             }
           ];

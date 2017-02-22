@@ -1,12 +1,3 @@
-;(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define([], factory);
-  } else if (typeof exports === 'object') {
-    module.exports = factory();
-  } else {
-    root.nx.Store = factory();
-  }
-}(this, function() {
 (function () {
 
   var Store = nx.declare('nx.Store', {
@@ -36,7 +27,9 @@
     }
   });
 
-}());
 
-return nx.Store;
-}));
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Store;
+  }
+
+}());
