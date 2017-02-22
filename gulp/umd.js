@@ -17,6 +17,16 @@
         },
         namespace: function(file) {
           return 'nx.Store';
+        },
+        dependencies: function(file) {
+          return [
+            {
+              name: 'nx',
+              amd: 'nx',
+              cjs: 'nx',
+              global: 'nx'
+            }
+          ];
         }
       }))
       .pipe(gulp.dest('dist'));
