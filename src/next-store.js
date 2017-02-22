@@ -1,5 +1,6 @@
 (function () {
 
+  var nx = require('next-js-core2');
   var Store = nx.declare('nx.Store', {
     statics: {
       engine: 'localStorage',
