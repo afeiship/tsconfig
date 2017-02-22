@@ -3,7 +3,7 @@
   var Store = nx.declare('nx.Store', {
     statics: {
       engine: 'localStorage',
-      prefix: 'nx',
+      prefix: '',
       config: function (inOptions) {
         nx.mix(Store, inOptions);
       },
@@ -33,7 +33,8 @@
         global[Store.engine].clear();
       },
       __key:function (inKey){
-        return [Store.prefix,'.',inKey].join('');
+        var prefix = Store.prefix;
+        return prefix ? [prefix,'.',inKey].join('') :'';
       }
     }
   });
