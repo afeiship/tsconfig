@@ -1,5 +1,4 @@
 (function () {
-  'use strict'
 
   var Store = nx.declare('nx.Store', {
     statics: {
@@ -29,8 +28,8 @@
   });
 
 
-  if (typeof exports !== 'undefined' && exports.default) {
-    exports.default = Store;
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Store;
   }
 
 }());
