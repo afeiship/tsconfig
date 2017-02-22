@@ -1,5 +1,5 @@
 #next-store
-> Store for mobile based on next toolkit.
+> A Storage toolkit for mobile based on nextjs.
 
 
 ## install:

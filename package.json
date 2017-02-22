@@ -1,7 +1,7 @@
 {
   "name": "next-store",
   "version": "0.0.0",
-  "description": "Store for mobile based on next toolkit.",
+  "description": "A Storage toolkit for mobile based on nextjs.",
   "homepage": "https://github.com/afeiship/next-store",
   "author": {
     "name": "afei",
