@@ -8,7 +8,7 @@
     "email": "1290657123@qq.com"
   },
   "scripts":{
-    "build":"gulp umd"
+    "build":"gulp build"
   },
   "main":"dist/next-store.js",
   "license": "MIT",
