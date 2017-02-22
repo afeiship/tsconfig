@@ -34,7 +34,7 @@
       },
       __key:function (inKey){
         var prefix = Store.prefix;
-        return prefix ? [prefix,'.',inKey].join('') :'';
+        return prefix ? [prefix,'.',inKey].join('') : inKey;
       }
     }
   });
