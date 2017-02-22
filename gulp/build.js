@@ -10,10 +10,8 @@
   });
 
   gulp.task('build', ['clean'], function() {
-    console.log('Your task goes here!');
-    //gulp.start(['styles']);
+    return gulp.src('src/next-store.js')
+      .pipe(gulp.dest('dist'));
   });
-
-
 
 }());

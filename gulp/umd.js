@@ -9,11 +9,15 @@
     pattern: ['gulp-*', 'gulp.*', 'del']
   });
 
-    gulp.task('umd', function() {
-    return gulp.src('src/next-store.js')
-        .pipe($.umd())
-        .pipe(gulp.dest('dist'));
-    });
+  gulp.task('umd', function() {
+  return gulp.src('src/next-store.js')
+      .pipe($.umd({
+        exports:function(){
+          return 'nx.Store';
+        }
+      }))
+      .pipe(gulp.dest('dist'));
+  });
 
 
 }());
