@@ -2,6 +2,17 @@
 > Store for mobile based on next toolkit.
 
 
+## configs:
++ use config API:
+```javascript
+import nxStore from 'next-store';
+nxStore.config({
+  prefix:'nx',
+  engine:'localStorage'
+})
+```
+
+
 ## apis:
 + set/get/sets
 ```javascript
