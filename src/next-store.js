@@ -29,8 +29,8 @@
   });
 
 
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Store;
+  if (typeof exports !== 'undefined' && exports.default) {
+    exports.default = Store;
   }
 
 }());
