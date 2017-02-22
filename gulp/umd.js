@@ -14,6 +14,9 @@
       .pipe($.umd({
         exports:function(){
           return 'nx.Store';
+        },
+        namespace: function(file) {
+          return 'nx.Store';
         }
       }))
       .pipe(gulp.dest('dist'));

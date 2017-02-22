@@ -1,6 +1,5 @@
 (function () {
 
-  var nx = require('next-js-core2');
   var Store = nx.declare('nx.Store', {
     statics: {
       engine: 'localStorage',
@@ -27,10 +26,5 @@
       }
     }
   });
-
-
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Store;
-  }
 
 }());

@@ -1,6 +1,14 @@
+;(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define([], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory();
+  } else {
+    root.nx.Store = factory();
+  }
+}(this, function() {
 (function () {
 
-  var nx = require('next-js-core2');
   var Store = nx.declare('nx.Store', {
     statics: {
       engine: 'localStorage',
@@ -28,9 +36,7 @@
     }
   });
 
-
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Store;
-  }
-
 }());
+
+return nx.Store;
+}));
