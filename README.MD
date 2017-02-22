@@ -2,6 +2,12 @@
 > Store for mobile based on next toolkit.
 
 
+## install:
+```bash
+npm install afeiship/next-store --save
+```
+
+
 ## configs:
 + use config API:
 ```javascript
