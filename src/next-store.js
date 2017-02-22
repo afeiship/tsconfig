@@ -3,14 +3,15 @@
   var Store = nx.declare('nx.Store', {
     statics: {
       engine: 'localStorage',
+      prefix: 'nx',
       config: function (inOptions) {
         nx.mix(Store, inOptions);
       },
       set: function (inKey, inValue) {
-        global[Store.engine].setItem(inKey, nx.stringify(inValue));
+        global[Store.engine].setItem(Store.__key(inKey), nx.stringify(inValue));
       },
       get: function (inKey) {
-        var value = global[Store.engine].getItem(inKey);
+        var value = global[Store.engine].getItem(Store.__key(inKey));
         return nx.parse(value);
       },
       sets: function (inObject) {
@@ -18,11 +19,21 @@
           Store.set(key, value);
         });
       },
+      gets: function(inKeys){
+        var result={};
+        nx.each(inKeys,function(i,key){
+          result[key]=Store.get(key);
+        });
+        return result;
+      },
       clear: function (inKey) {
         global[Store.engine].removeItem(inKey);
       },
       clearAll: function () {
         global[Store.engine].clear();
+      },
+      __key:function (inKey){
+        return [Store.prefix,'.',inKey].join('');
       }
     }
   });

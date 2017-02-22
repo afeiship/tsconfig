@@ -18,7 +18,10 @@ nxStore.sets({
   }
 });
 
+
+
 nxStore.get('key3');
+nxStore.gets(['key1','key2','key3']);
 ```
 
 + clear/clearAll
