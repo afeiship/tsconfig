@@ -26,11 +26,12 @@
         var result={};
         var keys = inKeys || [];
         var i = 0, key;
+        var storeEngine = global[Store.engine];
         if(keys.length == 0){
-          for (i = 0; i < localStorage.length; i++)   {
-            key = localStorage.key(i);
+          for (i = 0; i < storeEngine.length; i++)   {
+            key = storeEngine.key(i);
             keys.push(key);
-            result[key] = localStorage.getItem(key);
+            result[key] = nx.parse(storeEngine.getItem(key));
           }
         }else{
           nx.each(inKeys,function(i,key){
