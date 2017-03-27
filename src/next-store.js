@@ -1,5 +1,8 @@
 (function () {
 
+  global = global || this;
+
+  var nx = global.nx || require('next-js-core2');
   var Store = nx.declare('nx.Store', {
     statics: {
       engine: 'localStorage',
@@ -21,9 +24,19 @@
       },
       gets: function(inKeys){
         var result={};
-        nx.each(inKeys,function(i,key){
-          result[key]=Store.get(key);
-        });
+        var keys = inKeys || [];
+        var i = 0, key;
+        if(keys.length == 0){
+          for (i = 0; i < localStorage.length; i++)   {
+            key = localStorage.key(i);
+            keys.push(key);
+            result[key] = localStorage.getItem(key);
+          }
+        }else{
+          nx.each(inKeys,function(i,key){
+            result[key]=Store.get(key);
+          });
+        }
         return result;
       },
       clear: function (inKey) {

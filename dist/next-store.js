@@ -1,5 +1,17 @@
+;(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['nx'], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory(require('next-js-core2'));
+  } else {
+    root.nx.Store = factory(root.nx);
+  }
+}(this, function(nx) {
 (function () {
 
+  global = global || this;
+
+  var nx = global.nx || require('next-js-core2');
   var Store = nx.declare('nx.Store', {
     statics: {
       engine: 'localStorage',
@@ -21,9 +33,19 @@
       },
       gets: function(inKeys){
         var result={};
-        nx.each(inKeys,function(i,key){
-          result[key]=Store.get(key);
-        });
+        var keys = inKeys || [];
+        var i = 0, key;
+        if(keys.length == 0){
+          for (i = 0; i < localStorage.length; i++)   {
+            key = localStorage.key(i);
+            keys.push(key);
+            result[key] = localStorage.getItem(key);
+          }
+        }else{
+          nx.each(inKeys,function(i,key){
+            result[key]=Store.get(key);
+          });
+        }
         return result;
       },
       clear: function (inKey) {
@@ -45,3 +67,6 @@
   }
 
 }());
+
+return Store;
+}));
