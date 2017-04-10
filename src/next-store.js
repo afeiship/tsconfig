@@ -31,13 +31,12 @@
           for (i = 0; i < storeEngine.length; i++)   {
             key = storeEngine.key(i);
             keys.push(key);
-            result[key] = Store.get(key);
           }
-        }else{
-          nx.each(inKeys,function(i,key){
-            result[key]=Store.get(key);
-          });
         }
+
+        nx.each(keys,function(i,key){
+          result[key]=Store.get(key);
+        });
         return result;
       },
       clear: function (inKey) {
