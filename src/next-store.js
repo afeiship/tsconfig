@@ -31,7 +31,7 @@
           for (i = 0; i < storeEngine.length; i++)   {
             key = storeEngine.key(i);
             keys.push(key);
-            result[key] = nx.parse(Store.get(key));
+            result[key] = Store.get(key);
           }
         }else{
           nx.each(inKeys,function(i,key){
