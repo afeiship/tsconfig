@@ -42,8 +42,14 @@
       clear: function (inKey) {
         global[Store.engine].removeItem(inKey);
       },
-      clearAll: function () {
-        global[Store.engine].clear();
+      clearAll: function (inArray) {
+        if(Array.isArray(inArray)){
+          inArray.forEach(function(item){
+            Store.clear(item);
+          })
+        }else{
+          global[Store.engine].clear();
+        }
       },
       __key:function (inKey){
         var prefix = Store.prefix;
