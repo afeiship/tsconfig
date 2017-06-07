@@ -3,6 +3,7 @@
   var global = global || this;
   var nx = global.nx || require('next-js-core2');
 
+  //engie list:
   var ENGIE_LOCAL = 'localStorage';
   var ENGIE_SESSION = 'sessionStorage';
 
