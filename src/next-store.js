@@ -1,11 +1,36 @@
 (function () {
 
-  global = global || this;
-
+  var global = global || this;
   var nx = global.nx || require('next-js-core2');
+
+  var ENGIE_LOCAL = 'localStorage';
+  var ENGIE_SESSION = 'sessionStorage';
+
   var Store = nx.declare('nx.Store', {
+    properties:{
+      local:{
+        get:function(){
+          this.engine = ENGIE_LOCAL;
+          return this.gets();
+        },
+        set: function(inValue){
+          this.engine = ENGIE_LOCAL;
+          this.sets(inValue);
+        }
+      },
+      session:{
+        get:function(){
+          this.engine = ENGIE_SESSION;
+          return this.gets();
+        },
+        set: function(inValue){
+          this.engine = ENGIE_SESSION;
+          this.sets(inValue);
+        }
+      }
+    },
     statics: {
-      engine: 'localStorage',
+      engine: ENGIE_LOCAL,
       prefix: '',
       config: function (inOptions) {
         nx.mix(Store, inOptions);
@@ -57,7 +82,6 @@
       }
     }
   });
-
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = Store;
