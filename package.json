@@ -7,10 +7,10 @@
     "name": "afei",
     "email": "1290657123@qq.com"
   },
-  "scripts":{
-    "build":"gulp build"
+  "scripts": {
+    "build": "gulp build"
   },
-  "main":"dist/next-store.js",
+  "main": "dist/next-store.js",
   "license": "MIT",
   "devDependencies": {
     "del": "^2.2.1",
@@ -23,6 +23,8 @@
     "yargs": "^4.7.1"
   },
   "dependencies": {
-    "next-js-core2": "github:afeiship/next-js-core2"
+    "next-js-core2": "github:afeiship/next-js-core2",
+    "next-local-storage": "github:afeiship/next-local-storage",
+    "next-session-storage": "github:afeiship/next-session-storage"
   }
 }
