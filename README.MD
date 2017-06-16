@@ -49,6 +49,7 @@ NxStore.sets({
 
 NxStore.get('key3');
 NxStore.gets(['key1','key2','key3']);
+NxStore.gets();
 ```
 
 + clear/clears
