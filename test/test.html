@@ -9,9 +9,13 @@
 <body>
 
   <script src="../node_modules/next-js-core2/dist/next-js-core2.js"></script>
-  <script src="../dist/next-store.js"></script>
+  <script src="../node_modules/next-abstract-storage/dist/next-abstract-storage.js"></script>
+  <script src="../node_modules/next-local-storage/dist/next-local-storage.js"></script>
+  <script src="../node_modules/next-session-storage/dist/next-session-storage.js"></script>
+  <script src="../src/next-store.js"></script>
 
   <script>
+    nx.Store.attach('MY_PROJECT_PREFIX');
     nx.Store.local = {
       name:'afei',
       age:120
@@ -19,6 +23,11 @@
 
 
     console.log(nx.Store.local);
+
+
+    nx.Store.engine = 'sessionStorage';
+    nx.Store.set('mysession1','svl1');
+    console.log( nx.Store.gets() );
   </script>
 
 </body>
