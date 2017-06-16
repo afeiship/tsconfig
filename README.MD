@@ -12,21 +12,30 @@ npm install afeiship/next-store --save
 ## configs:
 + use config API:
 ```javascript
-import nxStore from 'next-store';
-nxStore.config({
-  prefix:'nx',
-  engine:'localStorage'
-})
+import NxStore from 'next-store';
+NxStore.attach('MY_PROJECT_PREFIX');
+NxStore.local = {
+  name:'afei',
+  age:120
+};
+
+
+console.log(NxStore.local);
+
+
+NxStore.engine = 'sessionStorage';
+NxStore.set('mysession1','svl1');
+console.log( NxStore.gets() );
 ```
 
 
 ## apis:
 + set/get/sets
 ```javascript
-import nxStore from 'next-store';
+import NxStore from 'next-store';
 
-nxStore.set('key1','value1');
-nxStore.sets({
+NxStore.set('key1','value1');
+NxStore.sets({
   'key2':224,
   'key3':{
     items:[
@@ -38,12 +47,13 @@ nxStore.sets({
 
 
 
-nxStore.get('key3');
-nxStore.gets(['key1','key2','key3']);
+NxStore.get('key3');
+NxStore.gets(['key1','key2','key3']);
 ```
 
-+ clear/clearAll
++ clear/clears
 ```javascript
-nxStore.clear('key1');
-nxStore.clearAll();
+NxStore.clear('key1');
+NxStore.clears(['key1','key3']);
+NxStore.clears();
 ```
