@@ -30,9 +30,9 @@
     },
     statics:{
       engine: ENGIE_LOCAL,
-      init: function(){
-        this._localStorage = new NxLocalStorage();
-        this._sessionStorage = new NxSessionStorage();
+      attach: function(inPrefix){
+        this._localStorage = new NxLocalStorage(inPrefix);
+        this._sessionStorage = new NxSessionStorage(inPrefix);
 
         //populate methods:
         nx.each([
