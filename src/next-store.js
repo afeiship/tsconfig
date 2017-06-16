@@ -34,7 +34,7 @@
         this._localStorage = new NxLocalStorage();
         this._sessionStorage = new NxSessionStorage();
 
-        //delegates methods:
+        //populate methods:
         nx.each([
           'set',
           'sets',
@@ -44,8 +44,8 @@
           'clears'
         ],function(_,name){
           var self = this;
-          this[name] = function(inValue){
-            return self['_' + this.engine][name](inValue);
+          this[name] = function(inName,inValue){
+            return self['_' + self.engine][name](inName,inValue);
           };
         },this);
       },
