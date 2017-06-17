@@ -30,7 +30,7 @@
     },
     statics:{
       engine: ENGIE_LOCAL,
-      attach: function(inPrefix){
+      config: function(inPrefix){
         this._localStorage = new NxLocalStorage(inPrefix);
         this._sessionStorage = new NxSessionStorage(inPrefix);
 
