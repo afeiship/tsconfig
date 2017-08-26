@@ -21,7 +21,7 @@
       },
       session:{
         get:function(){
-          this._sessionStorage.gets();
+          return this._sessionStorage.gets();
         },
         set: function(inValue){
           this._sessionStorage.sets(inValue);
