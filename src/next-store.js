@@ -1,6 +1,6 @@
 (function () {
 
-  var global = global || window || this;
+  var global = global || this || self || window;
   var nx = global.nx || require('next-js-core2');
   var NxLocalStorage = nx.LocalStorage || require('next-local-storage');
   var NxSessionStorage = nx.SessionStorage || require('next-session-storage');
