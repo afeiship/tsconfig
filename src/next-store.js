@@ -12,7 +12,7 @@
   var NxStore = nx.declare('nx.Store', {
     properties:{
       local:{
-        get:function(){
+        get: function(){
           return this._localStorage.gets();
         },
         set: function(inValue){
@@ -20,7 +20,7 @@
         }
       },
       session:{
-        get:function(){
+        get: function(){
           return this._sessionStorage.gets();
         },
         set: function(inValue){
@@ -30,7 +30,7 @@
     },
     statics:{
       engine: ENGIE_LOCAL,
-      config: function(inPrefix){
+      config: function (inPrefix){
         this._localStorage = new NxLocalStorage(inPrefix);
         this._sessionStorage = new NxSessionStorage(inPrefix);
 
