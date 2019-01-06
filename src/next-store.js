@@ -26,11 +26,7 @@
       }
     },
     statics: {
-      ENGINE_TYPE: {
-        local: 'localStorage',
-        session: 'sessionStorage'
-      },
-      engine: this.ENGINE_TYPE.local,
+      engine: 'localStorage',
       config: function(inPrefix) {
         this._localStorage = new NxLocalStorage(inPrefix);
         this._sessionStorage = new NxSessionStorage(inPrefix);
