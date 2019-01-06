@@ -1,6 +1,6 @@
 {
   "name": "next-store",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A Storage toolkit for mobile based on nextjs.",
   "homepage": "https://github.com/afeiship/next-store",
   "author": {
@@ -18,7 +18,6 @@
     "gulp-concat": "^2.6.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
     "gulp-umd": "^0.2.0",
     "yargs": "^4.7.1"
   },
