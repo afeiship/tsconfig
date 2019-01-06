@@ -30,7 +30,7 @@
         local: 'localStorage',
         session: 'sessionStorage'
       },
-      engine: ENGINE_TYPE.local,
+      engine: this.ENGINE_TYPE.local,
       config: function(inPrefix) {
         this._localStorage = new NxLocalStorage(inPrefix);
         this._sessionStorage = new NxSessionStorage(inPrefix);
