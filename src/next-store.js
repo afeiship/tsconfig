@@ -6,9 +6,6 @@
   var POPULATE_METHODS = ['set', 'sets', 'get', 'gets', 'clear', 'clears'];
 
   //engie list:
-  var ENGIE_LOCAL = 'localStorage';
-  var ENGIE_SESSION = 'sessionStorage';
-
   var NxStore = nx.declare('nx.Store', {
     properties: {
       local: {
@@ -29,7 +26,11 @@
       }
     },
     statics: {
-      engine: ENGIE_LOCAL,
+      ENGINE_TYPE: {
+        local: 'localStorage',
+        session: 'sessionStorage'
+      },
+      engine: ENGINE_TYPE.local,
       config: function(inPrefix) {
         this._localStorage = new NxLocalStorage(inPrefix);
         this._sessionStorage = new NxSessionStorage(inPrefix);
