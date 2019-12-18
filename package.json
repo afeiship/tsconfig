@@ -1,29 +1,41 @@
 {
-  "name": "next-store",
-  "version": "1.0.1",
-  "description": "A Storage toolkit for mobile based on nextjs.",
+  "name": "@feizheng/next-store",
+  "version": "1.0.0",
+  "description": "Store for mobile based on next toolkit.",
   "homepage": "https://github.com/afeiship/next-store",
   "author": {
     "name": "afei",
     "email": "1290657123@qq.com"
   },
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp",
+    "test": "jest"
   },
   "main": "dist/next-store.js",
   "license": "MIT",
   "devDependencies": {
-    "del": "^2.2.1",
-    "gulp": "^3.9.1",
+    "@feizheng/gulp-pkg-header": "^1.0.1",
+    "@feizheng/rake-git": "^1.2.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.0",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-umd": "^0.2.0",
-    "yargs": "^4.7.1"
+    "gulp-debug": "^4.0.0",
+    "gulp-ignore": "^3.0.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jest": "^24.9.0",
+    "uglify-save-license": "^0.4.1",
+    "yargs": "^15.0.2"
   },
   "dependencies": {
-    "next-js-core2": "github:afeiship/next-js-core2",
-    "next-local-storage": "github:afeiship/next-local-storage",
-    "next-session-storage": "github:afeiship/next-session-storage"
+    "@feizheng/next-js-core2": "^2.0.2",
+    "@feizheng/next-local-storage": "^1.0.0",
+    "@feizheng/next-session-storage": "^1.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

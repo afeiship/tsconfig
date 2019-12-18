@@ -1,6 +1,6 @@
 {
   "name": "next-store",
-  "description": "A Storage toolkit for mobile based on nextjs.",
+  "description": "Store for mobile based on next toolkit.",
   "main": "dist/next-store.js",
   "authors": [
     "afei"
@@ -20,7 +20,7 @@
     "test",
     "tests",
     "src",
-    "gulp",
+    "build",
     "gulpfile.js"
   ]
 }

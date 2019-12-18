@@ -1,8 +1,18 @@
+/*!
+ * name: @feizheng/next-store
+ * description: Store for mobile based on next toolkit.
+ * url: https://github.com/afeiship/next-store
+ * version: 1.0.0
+ * date: 2019-12-18 19:34:37
+ * license: MIT
+ */
+
 (function() {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('next-js-core2');
-  var NxLocalStorage = nx.LocalStorage || require('next-local-storage');
-  var NxSessionStorage = nx.SessionStorage || require('next-session-storage');
+  var nx = global.nx || require('@feizheng/next-js-core2');
+
+  var NxLocalStorage = nx.LocalStorage || require('@feizheng/next-local-storage');
+  var NxSessionStorage = nx.SessionStorage || require('@feizheng/next-session-storage');
   var POPULATE_METHODS = ['set', 'sets', 'get', 'gets', 'clear', 'clears'];
 
   //engie list:
@@ -50,3 +60,5 @@
     module.exports = NxStore;
   }
 })();
+
+//# sourceMappingURL=next-store.js.map
