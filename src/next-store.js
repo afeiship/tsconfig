@@ -4,7 +4,6 @@
 
   var NxLocalStorage = nx.LocalStorage || require('@feizheng/next-local-storage');
   var NxSessionStorage = nx.SessionStorage || require('@feizheng/next-session-storage');
-  var POPULATE_METHODS = ['set', 'sets', 'get', 'gets', 'del', 'dels', 'clear'];
 
   //engie list:
   var NxStore = nx.declare('nx.Store', {

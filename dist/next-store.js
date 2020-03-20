@@ -3,7 +3,7 @@
  * description: Storage for weapp based on next.
  * url: https://github.com/afeiship/next-store
  * version: 2.0.0
- * date: 2020-03-20 14:15:05
+ * date: 2020-03-20 14:15:31
  * license: MIT
  */
 
@@ -13,7 +13,6 @@
 
   var NxLocalStorage = nx.LocalStorage || require('@feizheng/next-local-storage');
   var NxSessionStorage = nx.SessionStorage || require('@feizheng/next-session-storage');
-  var POPULATE_METHODS = ['set', 'sets', 'get', 'gets', 'del', 'dels', 'clear'];
 
   //engie list:
   var NxStore = nx.declare('nx.Store', {
