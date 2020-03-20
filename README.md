@@ -16,6 +16,7 @@ npm install -S @feizheng/next-store
 ```js
 import NxStore from '@feizheng/next-store';
 
+// init with namespace(prefix)
 const store = new NxStore('nxapp');
 
 // set
