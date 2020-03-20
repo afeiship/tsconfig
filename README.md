@@ -7,9 +7,9 @@ npm install -S @feizheng/next-store
 ```
 
 ## apis
-| api | params     | description                           | description |
-| --- | ---------- | ------------------------------------- | ----------- |
-| $   | engineName | Select local/session engine instance. | -           |
+| api | params     | default | description                           |
+| --- | ---------- | ------- | ------------------------------------- |
+| $   | engineName | -       | Select local/session engine instance. |
 
 
 ## usage
