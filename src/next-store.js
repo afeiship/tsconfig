@@ -25,13 +25,13 @@
         }
       }
     },
-    statics: {
-      engine: function(inEngine) {
-        return this['_' + inEngine + 'Storage'];
-      },
-      config: function(inPrefix) {
+    methods: {
+      init: function(inPrefix) {
         this._localStorage = new NxLocalStorage(inPrefix);
         this._sessionStorage = new NxSessionStorage(inPrefix);
+      },
+      $: function(inEngine) {
+        return this['_' + inEngine + 'Storage'];
       }
     }
   });

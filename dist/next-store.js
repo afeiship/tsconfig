@@ -2,8 +2,8 @@
  * name: @feizheng/next-store
  * description: Storage for weapp based on next.
  * url: https://github.com/afeiship/next-store
- * version: 2.0.0
- * date: 2020-03-20 14:15:31
+ * version: 3.0.0
+ * date: 2020-03-20 18:37:32
  * license: MIT
  */
 
@@ -34,13 +34,13 @@
         }
       }
     },
-    statics: {
-      engine: function(inEngine) {
-        return this['_' + inEngine + 'Storage'];
-      },
-      config: function(inPrefix) {
+    methods: {
+      init: function(inPrefix) {
         this._localStorage = new NxLocalStorage(inPrefix);
         this._sessionStorage = new NxSessionStorage(inPrefix);
+      },
+      $: function(inEngine) {
+        return this['_' + inEngine + 'Storage'];
       }
     }
   });
