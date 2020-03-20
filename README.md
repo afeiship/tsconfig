@@ -24,6 +24,6 @@ store.local = { name:'nx', github:'afeiship', items:['next','gem','nx']}
 // get
 const { name } = store.local;
 
-// del
+// get/gets/set/sets/del/dels/clear
 store.$('local').del('nx');
 ```

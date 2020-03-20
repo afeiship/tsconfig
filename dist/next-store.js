@@ -2,8 +2,8 @@
  * name: @feizheng/next-store
  * description: Storage for weapp based on next.
  * url: https://github.com/afeiship/next-store
- * version: 3.0.0
- * date: 2020-03-20 18:37:32
+ * version: 3.0.1
+ * date: 2020-03-20 18:41:16
  * license: MIT
  */
 
