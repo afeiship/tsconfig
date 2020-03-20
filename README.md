@@ -28,3 +28,6 @@ const { name } = store.local;
 // get/gets/set/sets/del/dels/clear
 store.$('local').del('nx');
 ```
+
+## site
+- https://afeiship.github.io/next-store/
