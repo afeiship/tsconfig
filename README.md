@@ -7,10 +7,10 @@ npm install -S @feizheng/next-store
 ```
 
 ## apis
-| api    | params     | description   | description |
-| ------ | ---------- | ------------- | ----------- |
-| engine | engineName | local/session | -           |
-| config | namespace  | desc balabala | ''          |
+| api    | params     | description                     | description |
+| ------ | ---------- | ------------------------------- | ----------- |
+| engine | engineName | local/session engine string.    | -           |
+| config | namespace  | The application only namespace. | ''          |
 
 ## usage
 ```js
