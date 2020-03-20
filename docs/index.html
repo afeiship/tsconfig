@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nx.Store</title>
+  <script src="/@feizheng/next-js-core2/dist/next-js-core2.js"></script>
+  <script src="/@feizheng/next-slice2str/dist/next-slice2str.js"></script>
+  <script src="/@feizheng/next-json/dist/next-json.js"></script>
+  <script src="/@feizheng/next-abstract-storage/dist/next-abstract-storage.js"></script>
+  <script src="/@feizheng/next-local-storage/dist/next-local-storage.js"></script>
+  <script src="/@feizheng/next-session-storage/dist/next-session-storage.js"></script>
+  <script src="/next-store.js"></script>
+
+  <style>
+    .local {}
+
+    .session {}
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Local:</h1>
+    <div class="local"></div>
+    <button id="clear_local">Clear</button>
+
+    <h1>Session:</h1>
+    <div class="session"></div>
+    <button id="clear_sesson">Clear</button>
+  </div>
+  <script>
+    var el_local = document.querySelector('.local');
+    var el_session = document.querySelector('.session');
+    var el_local_clear = document.querySelector("#clear_local");
+    var el_session_clear = document.querySelector("#clear_sesson");
+    var store = nx.Store;
+    nx.Store.config('nxapp')
+    // local:
+    store.local = { abc: 'abc value' }
+    store.local = { def: 'def value', numer: 123, items: [1, 2, 3], a: { b: 'ccc' } }
+
+    // local:
+    store.session = { abc: 'abc value' }
+    store.session = { def: 'def value', numer: 123, items: [1, 2, 3], a: { b: 'ccc' } }
+
+
+
+    setLocal();
+    setSession();
+
+    function setLocal() {
+      el_local.innerHTML = `<pre>${JSON.stringify(store.local, null, 2)}</pre>`
+    }
+
+    function setSession() {
+      el_session.innerHTML = `<pre>${JSON.stringify(store.session, null, 2)}</pre>`
+    }
+
+    el_local_clear.onclick = () => {
+      console.log('local clear');
+      store.engine('local').clear();
+      setLocal();
+    }
+    el_session_clear.onclick = () => {
+      console.log('session clear');
+      store.engine('session').clear();
+      setSession();
+    }
+  </script>
+</body>
+
+</html>

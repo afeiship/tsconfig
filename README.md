@@ -1,5 +1,5 @@
 # next-store
-> Store for mobile based on next toolkit.
+> Storage for weapp based on next.
 
 ## installation
 ```bash
@@ -7,9 +7,10 @@ npm install -S @feizheng/next-store
 ```
 
 ## apis
-| api | params | description   |
-|-----|--------|---------------|
-| get | -      | desc balabala |
+| api    | params     | description   | description |
+| ------ | ---------- | ------------- | ----------- |
+| engine | engineName | local/session | -           |
+| config | namespace  | desc balabala | ''          |
 
 ## usage
 ```js

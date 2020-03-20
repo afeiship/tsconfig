@@ -4,7 +4,7 @@
 
   var NxLocalStorage = nx.LocalStorage || require('@feizheng/next-local-storage');
   var NxSessionStorage = nx.SessionStorage || require('@feizheng/next-session-storage');
-  var POPULATE_METHODS = ['set', 'sets', 'get', 'gets', 'clear', 'clears'];
+  var POPULATE_METHODS = ['set', 'sets', 'get', 'gets', 'del', 'dels', 'clear'];
 
   //engie list:
   var NxStore = nx.declare('nx.Store', {
@@ -27,22 +27,12 @@
       }
     },
     statics: {
-      engine: 'localStorage',
+      engine: function(inEngine) {
+        return this['_' + inEngine + 'Storage'];
+      },
       config: function(inPrefix) {
         this._localStorage = new NxLocalStorage(inPrefix);
         this._sessionStorage = new NxSessionStorage(inPrefix);
-
-        //populate methods:
-        nx.each(
-          POPULATE_METHODS,
-          function(_, name) {
-            var self = this;
-            this[name] = function(inKey, inValue) {
-              return self['_' + self.engine][name](inKey, inValue);
-            };
-          },
-          this
-        );
       }
     }
   });
