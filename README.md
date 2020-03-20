@@ -17,4 +17,11 @@ npm install -S @feizheng/next-store
 import NxStore from '@feizheng/next-store';
 
 // code goes here:
+NxStore.config('myapp');
+NxStore.local = { key1: 'data1', a:{ b:'tes1'} };
+NxStore.session = { key1: 'data1' };
+
+// get/gets
+const key1 = nx.get(NxStore.local, 'key1');
+const key2 = nx.get(NxStore.local, 'a.b');
 ```
