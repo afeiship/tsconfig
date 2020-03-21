@@ -7,9 +7,10 @@ npm install -S @feizheng/next-store
 ```
 
 ## apis
-| api | params     | default | description                           |
-| --- | ---------- | ------- | ------------------------------------- |
-| $   | engineName | -       | Select local/session engine instance. |
+| api    | params     | default | description                           |
+| ------ | ---------- | ------- | ------------------------------------- |
+| $      | engineName | -       | Select local/session engine instance. |
+| config | (options)  | -       | Select local/session engine instance. |
 
 
 ## usage
@@ -27,6 +28,8 @@ const { name } = store.local;
 
 // get/gets/set/sets/del/dels/clear
 store.$('local').del('nx');
+
+store.config({ prefix:'myprefix'})
 ```
 
 ## site

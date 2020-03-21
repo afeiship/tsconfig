@@ -30,6 +30,10 @@
         this._localStorage = new NxLocalStorage(inPrefix);
         this._sessionStorage = new NxSessionStorage(inPrefix);
       },
+      config: function(inOptions) {
+        nx.mix(this._localStorage, inOptions);
+        nx.mix(this._sessionStorage, inOptions);
+      },
       $: function(inEngine) {
         return this['_' + inEngine + 'Storage'];
       }

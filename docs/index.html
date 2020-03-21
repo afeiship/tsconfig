@@ -48,7 +48,10 @@
     var el_session = document.querySelector('.session');
     var el_local_clear = document.querySelector("#clear_local");
     var el_session_clear = document.querySelector("#clear_sesson");
-    var store = new nx.Store('nxapp')
+    var store = new nx.Store()
+    // config your store
+    store.config({ prefix: 'testapp' })
+
     // local:
     store.local = { abc: 'abc value' }
     store.local = { def: 'def value', numer: 123, items: [1, 2, 3], a: { b: 'ccc' } }
