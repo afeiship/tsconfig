@@ -42,9 +42,9 @@
         nx.mix(this._localStorage, inOptions);
         nx.mix(this._sessionStorage, inOptions);
       },
-      $: function(inEngine, inIsPurify) {
+      $: function(inName, inIsPurify) {
         var prefix = inIsPurify ? '' : '_';
-        return this[prefix + inEngine + 'Storage'];
+        return this[prefix + inName + 'Storage'];
       }
     }
   });

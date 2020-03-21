@@ -3,7 +3,7 @@
  * description: Storage for weapp based on next.
  * url: https://github.com/afeiship/next-store
  * version: 3.1.0
- * date: 2020-03-21 10:12:07
+ * date: 2020-03-21 10:36:37
  * license: MIT
  */
 
@@ -51,9 +51,9 @@
         nx.mix(this._localStorage, inOptions);
         nx.mix(this._sessionStorage, inOptions);
       },
-      $: function(inEngine, inIsPurify) {
+      $: function(inName, inIsPurify) {
         var prefix = inIsPurify ? '' : '_';
-        return this[prefix + inEngine + 'Storage'];
+        return this[prefix + inName + 'Storage'];
       }
     }
   });
