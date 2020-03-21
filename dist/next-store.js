@@ -2,8 +2,8 @@
  * name: @feizheng/next-store
  * description: Storage for weapp based on next.
  * url: https://github.com/afeiship/next-store
- * version: 3.0.2
- * date: 2020-03-21 08:54:51
+ * version: 3.1.0
+ * date: 2020-03-21 10:12:07
  * license: MIT
  */
 
@@ -13,6 +13,7 @@
 
   var NxLocalStorage = nx.LocalStorage || require('@feizheng/next-local-storage');
   var NxSessionStorage = nx.SessionStorage || require('@feizheng/next-session-storage');
+  var DEFAULT_OPTIONS = { prefix: '', purify: false };
 
   //engie list:
   var NxStore = nx.declare('nx.Store', {
@@ -35,16 +36,24 @@
       }
     },
     methods: {
-      init: function(inPrefix) {
-        this._localStorage = new NxLocalStorage(inPrefix);
-        this._sessionStorage = new NxSessionStorage(inPrefix);
+      init: function(inOptions) {
+        var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
+        // prefix storage:
+        this._localStorage = new NxLocalStorage(options.prefix);
+        this._sessionStorage = new NxSessionStorage(options.prefix);
+        // pureify storage:
+        if (options.purify) {
+          this.localStorage = new NxLocalStorage();
+          this.sessionStorage = new NxSessionStorage();
+        }
       },
       config: function(inOptions) {
         nx.mix(this._localStorage, inOptions);
         nx.mix(this._sessionStorage, inOptions);
       },
-      $: function(inEngine) {
-        return this['_' + inEngine + 'Storage'];
+      $: function(inEngine, inIsPurify) {
+        var prefix = inIsPurify ? '' : '_';
+        return this[prefix + inEngine + 'Storage'];
       }
     }
   });
