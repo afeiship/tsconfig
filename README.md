@@ -18,7 +18,7 @@ npm install -S @feizheng/next-store
 import NxStore from '@feizheng/next-store';
 
 // init with namespace(prefix)
-const store = new NxStore('nxapp');
+const store = new NxStore({ prefix:'abc', purify: true });
 
 // set
 store.local = { name:'nx', github:'afeiship', items:['next','gem','nx']}
@@ -28,6 +28,7 @@ const { name } = store.local;
 
 // get/gets/set/sets/del/dels/clear
 store.$('local').del('nx');
+store.$('local', true).del('xxx');
 
 store.config({ prefix:'myprefix'})
 ```
