@@ -1,9 +1,8 @@
-(function() {
-  var nx = require('@feizheng/next-js-core2');
-  var NxStore = require('../src/next-store');
+(function () {
+  const NxStore = require('../src');
 
-  describe('NxStore.methods', function() {
-    test('init with prefix/purify should have 4 instances', function() {
+  describe('NxStore.methods', function () {
+    test('init with prefix/purify should have 4 instances', function () {
       var store = new NxStore({ prefix: 'abc', purify: true });
       expect(typeof store._localStorage === 'object').toBe(true);
       expect(typeof store._sessionStorage === 'object').toBe(true);
@@ -11,7 +10,7 @@
       expect(typeof store.sessionStorage === 'object').toBe(true);
     });
 
-    test('init with prefix/no-purify should have 2 instances', function() {
+    test('init with prefix/no-purify should have 2 instances', function () {
       var store = new NxStore({ prefix: 'abc' });
       expect(typeof store._localStorage === 'object').toBe(true);
       expect(typeof store._sessionStorage === 'object').toBe(true);

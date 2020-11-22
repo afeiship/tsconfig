@@ -1,9 +1,14 @@
 # next-store
 > Storage for weapp based on next.
 
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
+
 ## installation
 ```bash
-npm install -S @feizheng/next-store
+npm install -S @jswork/next-store
 ```
 
 ## apis
@@ -33,5 +38,17 @@ store.$('local', true).del('xxx');
 store.config({ prefix:'myprefix'})
 ```
 
-## site
-- https://afeiship.github.io/next-store/
+## license
+Code released under [the MIT license](https://github.com/afeiship/next-store/blob/master/LICENSE.txt).
+
+[version-image]: https://img.shields.io/npm/v/@jswork/next-store
+[version-url]: https://npmjs.org/package/@jswork/next-store
+
+[license-image]: https://img.shields.io/npm/l/@jswork/next-store
+[license-url]: https://github.com/afeiship/next-store/blob/master/LICENSE.txt
+
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-store
+[size-url]: https://github.com/afeiship/next-store/blob/master/dist/next-store.min.js
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/next-store
+[download-url]: https://www.npmjs.com/package/@jswork/next-store
