@@ -2,8 +2,8 @@
  * name: @jswork/next-store
  * description: Storage for weapp based on next.
  * homepage: https://github.com/afeiship/next-store
- * version: 1.0.0
- * date: 2020-11-22 15:49:45
+ * version: 1.0.1
+ * date: 2020-11-22 15:51:05
  * license: MIT
  */
 
