@@ -20,7 +20,7 @@ npm install -S @jswork/next-store
 
 ## usage
 ```js
-import NxStore from '@feizheng/next-store';
+import NxStore from '@jswork/next-store';
 
 // init with namespace(prefix)
 const store = new NxStore({ prefix:'abc', purify: true });

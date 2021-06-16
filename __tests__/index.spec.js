@@ -47,12 +47,12 @@
         github: 'afeiship',
         items: ['nx', 'next']
       };
-      store.$('local', true).set('name', 'feizheng');
+      store.$('local', true).set('name', 'jswork');
       expect(store.$('local', true).gets()).toEqual({
         'abc@name': 'fei',
         'abc@github': 'afeiship',
         'abc@items': ['nx', 'next'],
-        name: 'feizheng'
+        name: 'jswork'
       });
     });
   });
