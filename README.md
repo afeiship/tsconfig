@@ -1,5 +1,5 @@
 # tsconfig
-> About Shared TypeScript config for my projects.
+> About [Shared TypeScript](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) config for my projects.
 
 ## installation
 ```shell
