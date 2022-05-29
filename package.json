@@ -1,6 +1,6 @@
 {
   "name": "@jswork/tsconfig",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "About Shared TypeScript config for my projects.",
   "homepage": "https://js.work",
   "main": "tsconfig.json",
@@ -20,5 +20,12 @@
   },
   "scripts": {
     "release": "release-it"
-  }
+  },
+  "keywords": [
+    "react",
+    "ts",
+    "tsconfig",
+    "tsx",
+    "typescript"
+  ]
 }
