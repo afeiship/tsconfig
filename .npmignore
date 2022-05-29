@@ -7,18 +7,15 @@ __tests__
 src
 build
 gulpfile.js
+rollup.config.js
 
 .editorconfig
 .prettierrc
-Gemfile
-jest.config.js
-LICENSE.txt
-Rakefile
-.vscode
-.release-it.json
-docs
+.prettierignore
 
-# vscode localhistory
+# vscode
+.vscode
 .history
-.release-it.json
-.ncurc.json
+.github
+api
+docs
