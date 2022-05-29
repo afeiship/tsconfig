@@ -19,3 +19,5 @@ rollup.config.js
 .github
 api
 docs
+
+.release-it.json
