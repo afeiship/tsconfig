@@ -9,10 +9,10 @@ npm i @jswork/tsconfig
 ## usage
 ```json
 {
-	"extends": "@jswork/tsconfig",
-	"compilerOptions": {
-		"outDir": "dist",
-		"target": "ES2021"
-	}
+  "extends": "@jswork/tsconfig",
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES2021"
+  }
 }
 ```
