@@ -15,8 +15,7 @@
   },
   "generator": "@jswork/generator-github",
   "devDependencies": {
-    "prettier": "^2.6.2",
-    "release-it": "^15.0.0"
+    "prettier": "^2.6.2"
   },
   "scripts": {
     "release": "release-it"
